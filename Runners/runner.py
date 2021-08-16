@@ -1,4 +1,4 @@
-from Node.node import NodeClass
+from Node.node import TreeNode
 
 if __name__ == '__main__':
-    NodeClass(42)
+    print(TreeNode(42))
