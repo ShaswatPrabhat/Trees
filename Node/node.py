@@ -31,6 +31,27 @@ class TreeNode:
     def get_height(self):
         return max(self.LeftSubtreeHeight, self.RightSubtreeHeight)
 
+    def pre_order_traverse(self):
+        print(self.Value)
+        if self.Left is not None:
+            self.Left.pre_order_traverse()
+        if self.Right is not None:
+            self.Right.pre_order_traverse()
+
+    def post_order_traverse(self):
+        if self.Left is not None:
+            self.Left.post_order_traverse()
+        if self.Right is not None:
+            self.Right.post_order_traverse()
+        print(self.Value)
+
+    def in_order_traverse(self):
+        if self.Left is not None:
+            self.Left.in_order_traverse()
+        print(self.Value)
+        if self.Right is not None:
+            self.Right.in_order_traverse()
+
     def __str__(self):
         return str.format('Tree Node with value {} and \nLeft Subtree \n{} \nand Right Subtree \n{}', self.Value,
                           self.Left,
